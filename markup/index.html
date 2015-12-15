@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>News and Media Dashboard</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"> <!-- needed for mobile devices -->
+  
+  	<!-- Import font -->
+  	<link href='http://fonts.googleapis.com/css?family=Roboto' rel ='stylesheet' type ='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+  	<!-- Style for Bootstrap -->
+  	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  	
+  	<!-- Custom style for the demo-->
+  	<link rel="stylesheet" href="css/style.css">
+  	<link rel="stylesheet" href="css/demo.css">
+  	<link rel="stylesheet" href="css/animate.css">
+
+  	<!-- Media Boxes CSS files -->
+	<link rel="stylesheet" href="../plugin/css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="../plugin/css/mediaBoxes.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+	<style>
+
+	/* == LETS MODIFY SOME COLORS AND STYLE FOR THE DEMO == */
+
+		/* Style the search text field and the sort */
+		#search, .media-boxes-drop-down{
+  			float: right;
+  		}
+  		.media-boxes-drop-down{
+  			margin-right: 10px;
+  		}
+		
+		/* Remove the margin-bottom of the text */
+		.media-box-content .media-box-text{
+			margin-bottom: 0 !important;
+		}	
+	
+		/* Change the style of the text */
+		.media-box-text{
+			color: #777;
+			line-height: 21px;
+		}
+
+		/* Footer style */
+		.media-box-footer{
+			-webkit-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.1);
+			   -moz-box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.1);
+			        box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.1);
+		}
+		.media-box-categories{
+			margin: 0;
+			font-size: 11px;
+		    font-style: italic;
+			color: #777;
+		}
+		.media-box-date{
+			margin-bottom: 8px;
+		}
+
+		/* Style of date */
+		.media-box-date{
+			font-size: 11px;
+		    color: #999;
+		    margin: 3px 0 0 0;
+		}
+
+		/* hover effect on the image */
+		.media-box-image img{
+		    -webkit-transition: all 0.8s ease-in-out;
+		       -moz-transition: all 0.8s ease-in-out;
+		         -o-transition: all 0.8s ease-in-out;
+		        -ms-transition: all 0.8s ease-in-out;
+		            transition: all 0.8s ease-in-out;
+
+		    -webkit-transform-origin: top left;
+		       -moz-transform-origin: top left;
+		         -o-transform-origin: top left;
+		        -ms-transform-origin: top left;
+		            transform-origin: top left;
+		}
+		.media-box-image:hover img{
+		    -webkit-transform: scale(1.1) translate(-20px);
+		       -moz-transform: scale(1.1) translate(-20px);
+		         -o-transform: scale(1.1) translate(-20px);
+		        -ms-transform: scale(1.1) translate(-20px);
+		            transform: scale(1.1) translate(-20px);
+		}
+
+	</style>
+	
+</head>
+<body>
+	
+	<!--LANGUAGE BAR-->
+
+<div id="brand-bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- UN global brand bar -->
+          <div class="container brandbar-header">
+            <div class="row">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="col-md-4">
+                <a class="navbar-brand" href="/en/">Welcome to the United Nations</a>
+              </div><!-- /UN global brand bar -->
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="col-md-8 language-switcher">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#language-switcher">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              
+              </div><!-- /.navbar-collapse -->
+              
+            </div> <!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /UN global brand bar and language switcher -->
+
+
+	<div class="grid-section">
+	<div class="title section">
+		<div class="content">
+			<div class="pull-left">
+				<img src="http://www.un.org/sites/www.un.org/themes/bootstrap_un/logo.png">
+			</div>
+			<div class="pull-left">
+				<h1>News And Media Dashboard</h1>
+				<h3>with breaking news from the UN News Service</h3>	
+			</div>
+		</div>
+	</div>
+
+		<div class="content grid-container">
+
+		<!--  ================== MEDIA BOXES ================== -->
+		
+		<div class="filters-container">
+
+			<ul class="media-boxes-filter" id="filter">
+			  <li><a class="selected" href="#" data-filter="*">All</a></li>
+			  <li><a href="#" data-filter=".Photography">Photos</a></li>
+			  <li><a href="#" data-filter=".Indoors">News</a></li>
+			  <li><a href="#" data-filter=".Nature, .Outside">Radio</a></li>
+			  <li><a href="#" data-filter=".Life">Videos</a></li>
+			</ul>
+
+		</div>		
+
+		<div id="grid">
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Photography Indoors">
+		            <div class="media-box-image">
+		                <div data-width="563" data-height="379" data-thumbnail="gallery/thumbnails/boscontaganda.jpg"></div>
+		                <div data-popup="gallery/img-14.jpg" title="Dolor sit amet"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-plus mb-open-popup"></i>
+		                </div>
+		            </div>
+		            <div class="media-box-content">
+		                <div class="media-box-title">Dolor sit amet</div>
+		               
+		            </div>
+
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Photography Indoors">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="214" data-thumbnail="gallery/thumbnails/thumb-14.jpg"></div>
+		                <div data-popup="gallery/img-14.jpg" title="Dolor sit amet"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-plus mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Dolor sit amet</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">+</a>
+		                </div>
+		                <div class="media-box-social-buttons">
+				            <a href=""><i class="fa fa-facebook"></i></a>
+				            <a href=""><i class="fa fa-twitter"></i></a>
+				            <a href=""><i class="fa fa-google-plus"></i></a>
+				            <a href=""><i class="fa fa-flickr"></i></a>
+				            <a href=""><i class="fa fa-rss"></i></a>
+			            </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Source:</span> Photography, Indoors</div>
+		            	
+		            </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Nature Outside">
+		            <div class="media-box-image">
+		                <div data-width="214" data-height="213" data-thumbnail="gallery/thumbnails/thumb-3.jpg"></div>
+						<div data-type="iframe" data-popup="https://www.youtube.com/watch?v=5guMumPFBag" title="Psico dell consecteture"></div>
+		                
+						<div class="thumbnail-overlay">
+							<i class="fa fa-video-camera mb-open-popup"></i>
+						</div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Psico dell consecteture</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Nature, Outside</div>
+		            </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Photography">
+		            <div class="media-box-image">
+		                <div data-width="240" data-height="161" data-thumbnail="gallery/thumbnails/thumb-15.jpg"></div>
+		                <div data-type="iframe" data-popup="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/140760102&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" title="Aed do eiusmod"></div>
+
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-headphones mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Aed do eiusmod</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Photography</div>
+		            </div>
+		        </div>
+
+		 <!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Life">
+	                <div class="media-box-quote">
+	                	<i class="quote-entry-icon fa fa-quote-left"></i>&nbsp;
+	                    A good programmer is someone who always looks both ways before crossing a one-way street.
+	                    &nbsp;<i class="quote-entry-icon fa fa-quote-right"></i>
+	                    <span>Doug Linder</span>
+	                </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Outside Life">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/thumb-16.jpg"></div>
+		                <div data-type="iframe" data-popup="https://www.youtube.com/watch?v=UrIbxk7idYA" title="Bncididunt ut labore"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-video-camera mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">A ut labore</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Outside, Life</div>
+		            </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Indoors">
+		            <div class="media-box-image">
+		                <div data-width="214" data-height="320" data-thumbnail="gallery/thumbnails/thumb-5.jpg"></div>
+		                <div data-type="iframe" data-popup="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/115861053&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" title="Et dolore magna"></div>
+
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-headphones mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Et dolore magna</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Indoors</div>
+		            </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Photography Outside">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="180" data-thumbnail="gallery/thumbnails/thumb-17.jpg"></div>
+		                <div data-type="iframe" data-popup="https://www.youtube.com/watch?v=2zqy21Z29ps" title="Enim ad minim"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-video-camera mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Enim ad minim</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Photography, Outside</div>
+		            </div>
+		        </div>
+		 
+		<!-- -------------------------- BOX MARKUP -------------------------- -->            
+		        <div class="media-box Photography Life">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/thumb-18.jpg"></div>
+		                <div data-type="iframe" data-popup="http://vimeo.com/22884674" title="Nostrud exercitation"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-video-camera mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Nostrud exercitation</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Photography, Life</div>
+		            </div>
+		        </div>
+		      
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Outside Nature">
+		            <div class="media-box-image">
+		                <div data-width="677" data-height="900" data-thumbnail="gallery/thumbnails/thumb-45.jpg"></div>
+		                <div data-popup="gallery/img-45.jpg" title="Ullamco laboris"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-plus mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Ullamco laboris</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Outside, Nature</div>
+		            </div>
+		        </div>
+		
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Indoors">
+	                <div class="media-box-quote">
+	                	<i class="quote-entry-icon fa fa-quote-left"></i>&nbsp;
+	                    Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.
+	                    &nbsp;<i class="quote-entry-icon fa fa-quote-right"></i>
+	                    <span>Dan Salomon</span>
+	                </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Life">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="214" data-thumbnail="gallery/thumbnails/thumb-20.jpg"></div>
+		                <div data-popup="gallery/img-20.jpg" title="Nisi ut aliquip"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-plus mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Nisi ut aliquip</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Life</div>
+		            </div>
+		        </div>
+		      
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Outside">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="180" data-thumbnail="gallery/thumbnails/thumb-21.jpg"></div>
+		                <div data-type="iframe" data-popup="https://www.youtube.com/watch?v=KVu3gS7iJu4" title="Ex ea commodo"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-video-camera mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Ex ea commodo</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Outside</div>
+		            </div>
+		        </div>
+		      
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Nature Outside">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="214" data-thumbnail="gallery/thumbnails/thumb-22.jpg"></div>
+		                <div data-popup="gallery/img-22.jpg" title="Duis aute irure"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-plus mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Duis aute irure</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Nature, Outside</div>
+		            </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Nature Life">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="214" data-thumbnail="gallery/thumbnails/thumb-23.jpg"></div>
+	                	<div data-type="iframe" data-popup="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/49297748&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" title="Dolor in reprehenderit"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-headphones mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Dolor in reprehenderit</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Nature, Life</div>
+		            </div>
+		        </div>
+
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Photography Indoors">
+		            <div class="media-box-image">
+		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/thumb-24.jpg"></div>
+		                <div data-popup="gallery/img-24.jpg" title="Duis aute irure"></div>
+		                
+		                <div class="thumbnail-overlay">
+	                      	<i class="fa fa-plus mb-open-popup"></i>
+		                </div>
+		            </div>
+
+		            <div class="media-box-content">
+		                <div class="media-box-title">Duis aute irure</div>
+		                <div class="media-box-date">December 10, 2013</div>
+		                <div class="media-box-text">
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#">Read more</a>
+		                </div>
+		            </div>
+
+		            <div class="media-box-footer">
+		            	<div class="media-box-categories"><span>Categories:</span> Photography, Indoors</div>
+		            </div>
+		        </div>    
+		      
+			  
+		</div> <!-- #container -->
+
+		<!--  ================== END MEDIA BOXES ================== -->
+
+		</div>
+
+	</div>
+
+		<div class="to-top">
+			<i class="glyphicon glyphicon-chevron-up"></i>
+		</div>
+	</div>
+
+
+<!--FOOTER-->
+
+<footer class="footer container">
+      <div class="row list-inline">
+        <div class="col-md-12">
+          <div class="pull-left flip footer-brand">
+            <a href="index.html" title="Home"><span class="site-name">United Nations</span></a>
+          </div>
+            <div class="pull-right flip"> 
+              <section class="region region-footer-5">
+               <div id="block-menu-menu-footer-links" class="block block-menu">
+                  <ul class="menu nav">
+                    <li class="first leaf"><a href="//www.un.org/en/contactus/">Contact</a></li>
+                    <li class="leaf"><a href="//www.un.org/en/aboutun/copyright/">Copyright </a></li>
+                    <li class="leaf"><a href="//www.un.org/en/aboutun/fraudalert/">Fraud Alert</a></li>
+                    <li class="leaf"><a href="//www.un.org/en/aboutun/privacy/">Privacy Notice</a></li>
+                    <li class="leaf"><a href="//www.un.org/en/siteindex/">Site Index</a></li>
+                    <li class="last leaf"><a href="//www.un.org/en/aboutun/terms/">Terms of Use</a></li>
+                  </ul> 
+                </div> 
+              </section>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+	<!-- jQuery 1.8+ -->
+	<script src="../plugin/js/jquery-1.10.2.min.js"></script>
+	
+	<!-- Media Boxes JS files -->
+	<script src="../plugin/js/jquery.isotope.min.js"></script>
+	<script src="../plugin/js/jquery.imagesLoaded.min.js"></script>
+	<script src="../plugin/js/jquery.transit.min.js"></script>
+	<script src="../plugin/js/jquery.easing.js"></script>
+	<script src="../plugin/js/waypoints.min.js"></script>
+	<script src="../plugin/js/modernizr.custom.min.js"></script>
+	<script src="../plugin/js/jquery.magnific-popup.min.js"></script>
+	<script src="../plugin/js/jquery.mediaBoxes.js"></script>
+
+	<script>
+
+	    $('#grid').mediaBoxes({
+	    	filterContainer: '#filter',
+	    	search: '#search',
+	    	sortContainer: '#sort',
+	    	columns: 4,
+	    	boxesToLoadStart: 9,
+	    	boxesToLoad: 6,
+	    	horizontalSpaceBetweenBoxes: 10,
+        	verticalSpaceBetweenBoxes: 10,
+        	getSortData: {
+	          title: '.media-box-title',
+	          categories: '.media-box-categories'
+	        },
+	    }); 
+
+	</script>
+
+
+	<!-- Bootstrap JS file -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="js/demo.js"></script>
+
+
+</body>
+</html>

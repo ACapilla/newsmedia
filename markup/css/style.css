@@ -1,0 +1,255 @@
+
+
+
+/* ======================================================= 
+ *    ---------------------------------
+ *    CONTENTS
+ *    ---------------------------------
+ *   
+ *      [1] MAIN STUFF
+ *      [2] HEADINGS
+ *      [2] HEADER
+ *      [3] MENU
+ *      [3.1] SHRINK MENU
+ *      [4] BIG BANNER
+ *      [5] CONTENT
+ *      [6] FEATURES
+ *      [7] FOOTER
+ *      [8] TO TOP
+ *      [9] RESPONSIVE DESIGN
+ *    
+ * ======================================================= */
+
+
+/* ====================================================================== *
+      [1] MAIN STUFF
+ * ====================================================================== */
+
+    body, p {
+        font-family: 'Roboto';
+        font-size: 18px;
+        line-height: 20.15px;
+        color: #333;
+        background: #fafafa;
+      }
+
+/* ====================================================================== *
+      [2] HEADINGS
+ * ====================================================================== */
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #4d4d4d;
+      }
+      
+      h1, .h1, h2, .h2, h3, .h3 {
+        margin-top: 18px;
+        margin-bottom: 9px;
+      }
+
+      
+      h1, .h1 {
+        font-size: 33px;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0em 0;
+      }
+      h2, .h2 {
+        font-size: 27px;
+      }
+      
+      h3 {
+        margin-top: 10px;
+        color: #666666;
+      }
+      
+      h3 {
+        font-size: 18px;
+      }
+      
+      h4 {
+        margin-bottom: 2px;
+      }
+      
+      h4, .h4 {
+        font-size: 17px;
+      }
+      
+      h5 {
+        font-size: 14.3px;
+        margin-bottom: 2px;
+      }
+      
+      h5 {
+        font-size: 14.3px;
+        margin-bottom: 2px;
+      }
+      
+      h6, .h6 {
+        font-size: 12px;
+      }
+
+/* LANGUAGE BAR */
+
+#brand-bar {
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      border: none !important;
+      border-bottom: #00adef solid 5px !important;
+      height: 41px;
+      min-height: inherit;
+    }
+
+    .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+    }
+
+    @media (min-width: 768px)
+    .navbar-fixed-top, .navbar-fixed-bottom {
+      border-radius: 0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom {
+      position: fixed;
+      right: 0;
+      left: 0;
+      z-index: 130;
+    }
+
+    @media (min-width: 768px)
+    .navbar {
+      border-radius: 0;
+    }
+
+    .navbar {
+      position: relative;
+      min-height: auto;
+      margin-bottom: 18px;
+      border: 1px solid transparent;
+    }
+
+    #brand-bar .brandbar-header {
+      padding-top: 10px;
+    }
+
+    @media (min-width: 1200px)
+    .container {
+      width: 1160px;
+    }
+
+    @media (min-width: 992px)
+    .container {
+      width: 960px;
+    }
+
+    @media (min-width: 768px)
+    .container {
+      width: 740px;
+    }
+
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    #brand-bar .brandbar-header a {
+      padding: 0;
+      font-size: 12.35px;
+      line-height: 17.03px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: black;
+    }
+
+    @media (min-width: 768px)
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+      margin-left: 0;
+    }
+
+    .navbar-default .navbar-brand {
+      color: #777;
+    }
+
+
+
+/* ====================================================================== *
+      [3] HEADER
+ * ====================================================================== */
+
+    
+
+    ul, ol {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.pull-left {
+  margin: 10px;
+}
+   
+
+/* ====================================================================== *
+      [7] FOOTER
+ * ====================================================================== */
+
+      .footer .list-inline .footer-brand {
+      height: 21px;
+      margin-top: -6px;
+      margin-bottom: 10px;
+      background: url(img/un-logo-footer.png) left top no-repeat;
+    }
+
+    .footer .list-inline .footer-brand a {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 21px;
+      letter-spacing: -0.02em;
+      color: #4d4d4d;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      padding-left: 30px;
+    }
+
+    .footer #block-menu-menu-footer-links ul.nav li {
+      float: left;
+      padding-right: 6.5px;
+      margin-right: 5.85px;
+      border-right: #737373 solid 1px;
+      line-height: 1;
+    }
+
+    .footer ul.nav li {
+      padding: 0;
+      margin: 0 0 6.5px 0;
+    }
+
+    .footer ul.nav li a {
+      padding: 0;
+      margin: 0;
+      color: black;
+    }
+
+    .footer ul.nav li {
+      list-style-image: none;
+      list-style-type: none;
+      margin-left: 0;
+    }
+
+    .nav > li {
+      position: relative;
+      display: block;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+      

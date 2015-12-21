@@ -48,7 +48,7 @@
 	            transition: margin 0.4s ease;
 	}
 
-	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	/*h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 		font-family: 'Open Sans';
 		font-weight: 500;
 	}
@@ -155,7 +155,7 @@
 		background-color: #fff !important;
 	}
 
-	/* drop down styes */
+	/* drop down styles */
 	.list-unstyled li{
 		position: relative;
 	}
@@ -397,7 +397,7 @@
  * ====================================================================== */
 
 	.content{
-		width: 1160px;
+		width: 1460px;
 		margin: auto;
 	}
 
@@ -559,10 +559,22 @@
 			width: 100%;
 			padding: 0px 10px !important;
 		}	
+		.pull-left {
+    		float: none !important;
+    	}
+    	.media-boxes-filter {
+    		float: left;
+    	}
 	}
 
 	@media only screen and (max-width: 760px) {
 		.content .navbar-nav>li>a{
 			padding: 15px 15px !important;
 		}
+		.pull-left {
+    		float: none !important;
+    	}
+    	.media-boxes-filter {
+    		float: left;
+    	}
 	}

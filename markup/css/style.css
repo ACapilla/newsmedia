@@ -3,21 +3,14 @@
 
 /* ======================================================= 
  *    ---------------------------------
- *    CONTENTS
+ *    CONTENTS UN STYLE GUIDE
  *    ---------------------------------
  *   
  *      [1] MAIN STUFF
- *      [2] HEADINGS
- *      [2] HEADER
- *      [3] MENU
- *      [3.1] SHRINK MENU
- *      [4] BIG BANNER
- *      [5] CONTENT
- *      [6] FEATURES
- *      [7] FOOTER
- *      [8] TO TOP
- *      [9] RESPONSIVE DESIGN
- *    
+ *      [1.2] HEADINGS
+ *      [2] LANGUAGE BAR
+ *      [3] HEADER
+ *      [4] FOOTER
  * ======================================================= */
 
 
@@ -34,7 +27,7 @@
       }
 
 /* ====================================================================== *
-      [2] HEADINGS
+      [1.2] HEADINGS
  * ====================================================================== */
 
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -91,10 +84,11 @@
       h6, .h6 {
         font-size: 12px;
       }
+/* ====================================================================== *
+      [2] LANGUAGE BAR
+ * ====================================================================== */
 
-/* LANGUAGE BAR */
-
-#brand-bar {
+    #brand-bar {
       background: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -102,6 +96,15 @@
       border-bottom: #00adef solid 5px !important;
       height: 41px;
       min-height: inherit;
+    }
+    #brand-bar .brandbar-header a.navbar-brand::before {
+    font-family: FontAwesome;
+    color: #000;
+    content: "";
+    font-size: 18.07px;
+    line-height: 0.9;
+    margin-right: 7.8px;
+    float: left;
     }
 
     .navbar-fixed-top {
@@ -118,7 +121,7 @@
       position: fixed;
       right: 0;
       left: 0;
-      z-index: 130;
+      z-index: 1030;
     }
 
     @media (min-width: 768px)
@@ -183,24 +186,20 @@
       [3] HEADER
  * ====================================================================== */
 
-    
+    .media-boxes-filter{
+      float: right;
+    }
 
-    ul, ol {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    float: right;
-}
-
-.pull-left {
-  margin: 10px;
-}
+    .pull-left {
+      margin: 10px;
+    }
    
 
 /* ====================================================================== *
-      [7] FOOTER
+      [4] FOOTER
  * ====================================================================== */
 
-      .footer .list-inline .footer-brand {
+    .footer .list-inline .footer-brand {
       height: 21px;
       margin-top: -6px;
       margin-bottom: 10px;
@@ -253,3 +252,31 @@
       margin-top: 50px;
     }
       
+/* ====================================================================== *
+      Media Box 
+ * ====================================================================== */
+      .media-box-content_item1 {
+        position: absolute; 
+        top: 78%; 
+        left: 0; 
+        
+      }
+
+      .media-box-title_item1 {
+        color: white;
+        font-size: 20px;
+        font-family: "roboto";
+        font-variant: uppercase;
+        padding: 10px 10px;
+        width: 100%;
+        background: rgba(0, 143, 213, 0.5); 
+      }
+
+      .media-box-caption {
+        margin-top: -20px;
+        margin-bottom: 13px;
+        margin-right: -10px;
+        font-size: 11px;
+        text-align: right;
+        color: #999;
+      }

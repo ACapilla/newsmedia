@@ -95,7 +95,8 @@
     color: rgb(51, 51, 51);
     line-height: 17px;
   }
-  
+
+
   .thumbnail-overlay-animated{
     position: relative;
     opacity: 0;
@@ -243,7 +244,7 @@
 
   .media-box-quote{
   	padding: 30px;
-  	background: #e54e53;
+  	background: #008fd5;
   	color: #fff;
   	font-size: 14px;
   	line-height: 28px;
@@ -324,7 +325,7 @@
 
   .media-box-footer{
   	background: #F8F8F8;
-	  padding: 20px;
+	  padding: 10px;
   }
 
   .media-box-social-buttons{
@@ -335,7 +336,13 @@
   .media-box-social-buttons i{
 	font-size: 17px;
 	color: #666;
-	margin: 0 7px;
+	margin: 10px;
+ /* border: 1px solid #666;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  -webkit-border-radius:25px;
+  -moz-border-radius:25px; --> round border */
   
 	  -webkit-transition: color .1s;
        -moz-transition: color .1s;
@@ -519,7 +526,7 @@
 
   .media-boxes-filter>li a:hover{
     text-decoration: none;
-    background: #333333;
+    background: #666;
     color: #fff;
   }
 
@@ -684,7 +691,7 @@
   }
 
   .thumbnail-overlay i.fa, .media-box-play-button, .media-box-sound-button{
-  	background: #e54e53;
+  	background: #008FD5;
     font-size: 13px;
     color:  #fff;
     text-align: center;

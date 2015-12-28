@@ -10,21 +10,27 @@
  *      [1.2] HEADINGS
  *      [2] LANGUAGE BAR
  *      [3] HEADER
- *      [4] FOOTER
+ *      [4] BREADCRUMB
+ *      [5] FOOTER
+ *      [6] RESPONSIVE DESIGN
+ *      [7] MEDIA BOXES
  * ======================================================= */
 
 
 /* ====================================================================== *
       [1] MAIN STUFF
  * ====================================================================== */
-
-    body, p {
-        font-family: 'Roboto';
-        font-size: 18px;
-        line-height: 20.15px;
-        color: #333;
-        background: #fafafa;
-      }
+html {
+  margin-right: 0 !important;
+  overflow: visible !important;
+}
+body {
+  font-family: 'Roboto';
+  -webkit-transition: margin 0.4s ease;
+  -moz-transition: margin 0.4s ease;
+  -o-transition: margin 0.4s ease;
+  transition: margin 0.4s ease;
+}
 
 /* ====================================================================== *
       [1.2] HEADINGS
@@ -32,7 +38,7 @@
 
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 1.1;
         color: #4d4d4d;
       }
@@ -42,20 +48,16 @@
         margin-bottom: 9px;
       }
 
-      
       h1, .h1 {
-        font-size: 33px;
+        font-size: 36px;
       }
-      h1 {
-        font-size: 2em;
-        margin: 0em 0;
-      }
+     
       h2, .h2 {
         font-size: 27px;
       }
       
       h3 {
-        margin-top: 10px;
+        margin-top: 5px;
         color: #666666;
       }
       
@@ -63,198 +65,349 @@
         font-size: 18px;
       }
       
-      h4 {
-        margin-bottom: 2px;
-      }
-      
-      h4, .h4 {
-        font-size: 17px;
-      }
-      
-      h5 {
-        font-size: 14.3px;
-        margin-bottom: 2px;
-      }
-      
-      h5 {
-        font-size: 14.3px;
-        margin-bottom: 2px;
-      }
-      
-      h6, .h6 {
-        font-size: 12px;
-      }
 /* ====================================================================== *
-      [2] LANGUAGE BAR
+      [2] LANGUAGE BAR 
  * ====================================================================== */
+a.language-link.active {
+    font-weight: 700 !important;
+}
 
-    #brand-bar {
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
-      border: none !important;
-      border-bottom: #00adef solid 5px !important;
-      height: 41px;
-      min-height: inherit;
-    }
-    #brand-bar .brandbar-header a.navbar-brand::before {
-    font-family: FontAwesome;
-    color: #000;
-    content: "";
-    font-size: 18.07px;
-    line-height: 0.9;
-    margin-right: 7.8px;
-    float: left;
-    }
+#brand-bar {
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  border: none !important;
+  border-bottom: #00adef solid 5px !important;
+  height: 41px;
+  min-height: inherit;
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
 
-    .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-    }
+@media (min-width: 768px) {
+.navbar-fixed-top, .navbar-fixed-bottom {
+  border-radius: 0;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+}
 
-    @media (min-width: 768px)
-    .navbar-fixed-top, .navbar-fixed-bottom {
-      border-radius: 0;
-    }
+@media (min-width: 768px) {
+.navbar {
+  border-radius: 0;
+}
+.navbar {
+  position: relative;
+  min-height: auto;
+  margin-bottom: 18px;
+  border: 1px solid transparent;
+}
+#brand-bar .brandbar-header {
+  padding-top: 10px !important;
 
-    .navbar-fixed-top, .navbar-fixed-bottom {
-      position: fixed;
-      right: 0;
-      left: 0;
-      z-index: 1030;
-    }
-
-    @media (min-width: 768px)
-    .navbar {
-      border-radius: 0;
-    }
-
-    .navbar {
-      position: relative;
-      min-height: auto;
-      margin-bottom: 18px;
-      border: 1px solid transparent;
-    }
-
-    #brand-bar .brandbar-header {
-      padding-top: 10px;
-    }
-
-    @media (min-width: 1200px)
-    .container {
-      width: 1160px;
-    }
-
-    @media (min-width: 992px)
-    .container {
-      width: 960px;
-    }
-
-    @media (min-width: 768px)
-    .container {
-      width: 740px;
-    }
-
-    .container {
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    #brand-bar .brandbar-header a {
-      padding: 0;
-      font-size: 12.35px;
-      line-height: 17.03px;
-      font-weight: 400;
-      letter-spacing: 0.03em;
-      color: black;
-    }
-
-    @media (min-width: 768px)
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-      margin-left: 0;
-    }
-
-    .navbar-default .navbar-brand {
-      color: #777;
-    }
+}
+.container {
+    max-width: 1460px;
+    padding-left: 10px;
+}
+}
+#brand-bar .brandbar-header a {
+  padding: 0;
+  font-size: 12.35px;
+  line-height: 17.03px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: black;
+}
 
 
+@media (min-width: 768px) {
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+.navbar-default .navbar-brand {
+  color: #777;
+}
+}
+
+@media (max-width: 692px) {
+#brand-bar .brandbar-header a {
+  margin-top: 10px;
+}
+.header {
+  font-size: 24px;
+  padding-top: 20px !important;
+}
+.lead {
+  font-size: 15px;
+  display: flex;
+  padding-bottom: 0 !important;
+}
+.logo {
+  width: 104px;
+  margin-top: 0 !important;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+header {
+  margin-top: 53px;
+}
+.headerText {
+  margin-left: 0 !important;
+  text-align: center;
+}
+}
+/* Adds home icon at the top */
+
+#brand-bar .brandbar-header a.navbar-brand:before {
+  font-family: FontAwesome;
+  color: black;
+  content: "\f015";
+  font-size: 18.07px;
+  line-height: 0.9;
+  margin-right: 7.8px;
+  float: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* List of languages and hamburger language menu */
+
+.language-switcher {
+    list-style: none !important;
+    text-align: right;
+}
+
+#navigation ul li {
+    display: inline;
+    padding-right: 13px;
+}
+
+#brand-bar .brandbar-header .language-switcher .language-title {
+  float: right;
+  margin-right: 10.4px;
+  line-height: 1.2;
+  margin-top: 11px;
+}
+
+#brand-bar .brandbar-header .language-switcher .language-title a {
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+@media (max-width: 767px) {
+  .visible-xs-inline {
+   display: inline !important;
+ }
+}
+
+@media (max-width: 768px) {
+  #brand-bar .brandbar-header a {
+    font-size: 12.09px;
+    letter-spacing: -0.02em;
+  }
+
+  #brand-bar .brandbar-header .language-switcher #language-switcher {
+    clear: both;
+  }
+
+
+  #brand-bar .brandbar-header .language-switcher #language-switcher ul.language-switcher-locale-url {
+   margin-top: 3px;
+   width: 161px;
+  }
+
+  #brand-bar .brandbar-header .language-switcher #language-switcher ul.language-switcher-locale-url li a {
+    background: white;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: #f2f2f2 solid 1px;
+}
+
+#navigation ul li {
+    display: inherit;
+    padding-right: 13px;
+    background: white;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: #f2f2f2 solid 1px;
+    text-align: left;
+}
+
+#brand-bar .brandbar-header .language-switcher #language-switcher ul.language-switcher-locale-url li.active a {
+    background: #f2f2f2;
+    font-weight: 700;
+}
+
+}
+
+#brand-bar .brandbar-header .language-switcher #language-switcher {
+    border-top: none;
+    padding: 0;
+    float: right;
+}
+
+.collapse.in {
+    display: block;
+}
+
+.navbar-collapse.in {
+    overflow-y: auto;
+}
+
+  #brand-bar .brandbar-header .language-switcher button.navbar-toggle {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    margin-right: 2px;
+    margin-top:10px;
+}
+
+#brand-bar .brandbar-header .language-switcher button.navbar-toggle span.icon-bar {
+    background-color: #00adef;
+}
+
+
+}
+
+a.language-link.active {
+    font-weight: 700 !important;
+}
+
+li.en.active {
+  background: #f2f2f2 !important;
+}
+
+
+@media (min-width: 768px) {
+  .visible-xs-block, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
+    display: none !important;
+  }
+}
 
 /* ====================================================================== *
       [3] HEADER
  * ====================================================================== */
 
-    .media-boxes-filter{
-      float: right;
-    }
+.media-boxes-filter{
+  float: right;
+}
 
-    .pull-left {
-      margin: 10px;
-    }
+.title h1 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.title img {
+      margin-right: 18px;
+      margin-top: 12px;
+}
    
+/* ====================================================================== *
+      [4] BREADCRUMB 
+ * ====================================================================== */
 
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb {
+  padding: 0px 0px;
+  margin-bottom: 18px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 4px;
+}
+ol.breadcrumb > li + li:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.breadcrumb > li + li::before {
+  content: " ";
+  padding: 0px 5px;
+  color: rgb(77, 77, 77);
+}
+
+/* ====================================================================== *
+      [6] CONTENT
+ * ====================================================================== */
+
+.content {
+  width: 1460px; /*1024px*/
+  margin: auto;
+}
 /* ====================================================================== *
       [4] FOOTER
  * ====================================================================== */
 
-    .footer .list-inline .footer-brand {
-      height: 21px;
-      margin-top: -6px;
-      margin-bottom: 10px;
-      background: url(img/un-logo-footer.png) left top no-repeat;
-    }
+.footer .list-inline .footer-brand {
+  font-size: 'Roboto';
+  height: 21px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  background: url(../img/un-logo-footer.png) left top no-repeat;
+}  
+.footer .list-inline .footer-brand a {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding-left: 30px;
+}
+.footer #block-menu-menu-footer-links ul.nav li {
+  float: left;
+  padding-right: 6.5px;
+  margin-right: 5.85px;
+  border-right: #737373 solid 1px;
+  line-height: 1;
+}
+.footer ul.nav li {
+  padding: 0;
+  margin: 0 0 6.5px 0;
+}
+.footer ul.nav li a {
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+.footer ul.nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+footer {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
 
-    .footer .list-inline .footer-brand a {
-      font-weight: 500;
-      font-size: 21px;
-      line-height: 21px;
-      letter-spacing: -0.02em;
-      color: #4d4d4d;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: block;
-      padding-left: 30px;
-    }
 
-    .footer #block-menu-menu-footer-links ul.nav li {
-      float: left;
-      padding-right: 6.5px;
-      margin-right: 5.85px;
-      border-right: #737373 solid 1px;
-      line-height: 1;
-    }
-
-    .footer ul.nav li {
-      padding: 0;
-      margin: 0 0 6.5px 0;
-    }
-
-    .footer ul.nav li a {
-      padding: 0;
-      margin: 0;
-      color: black;
-    }
-
-    .footer ul.nav li {
-      list-style-image: none;
-      list-style-type: none;
-      margin-left: 0;
-    }
-
-    .nav > li {
-      position: relative;
-      display: block;
-    }
-
-    footer {
-      margin-top: 50px;
-    }
-      
 /* ====================================================================== *
-      Media Box 
+      [10] MEDIA BOX 
  * ====================================================================== */
+
       .media-box-content_item1 {
         position: absolute; 
         top: 78%; 
@@ -280,3 +433,66 @@
         text-align: right;
         color: #999;
       }
+
+      .media-box-footer {
+        background: white;
+        padding: 10px;
+      }
+
+
+/* ====================================================================== *
+      [9] RESPONSIVE DESIGN
+ * ====================================================================== */
+
+@media only screen and (max-width: 1460px) {
+.content {
+  width: 100%;
+  padding: 0px 10px !important;
+}
+@media only screen and (max-width: 990px) {
+.content {
+  width: 100%;
+  padding: 0px 10px !important;
+}
+.media-boxes-filter{
+  float: left;
+}
+.title img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+}
+
+@media only screen and (max-width: 760px) {
+
+ .page-header {
+   font-weight: 800;
+   font-size: 30px;
+ } 
+
+.title {
+  margin-top: 30px;
+
+}
+.title img {
+  margin-bottom: 20px;
+}
+.title .content > .pull-left {
+  float: none !important;
+}
+.title h1 {
+  text-align: center;
+  font-size: 26px;
+}
+.title p {
+  text-align: center;
+}
+
+.media-boxes-filter>li a {
+  display: block;
+}
+
+
+

@@ -11,9 +11,10 @@
  *      [2] LANGUAGE BAR
  *      [3] HEADER
  *      [4] BREADCRUMB
- *      [5] FOOTER
- *      [6] RESPONSIVE DESIGN
+ *      [5] CONTENT
+ *      [6] FOOTER 
  *      [7] MEDIA BOXES
+ *      [8] RESPONSIVE DESIGN
  * ======================================================= */
 
 
@@ -344,7 +345,7 @@ ol.breadcrumb > li + li:before {
 }
 
 /* ====================================================================== *
-      [6] CONTENT
+      [5] CONTENT
  * ====================================================================== */
 
 .content {
@@ -352,7 +353,7 @@ ol.breadcrumb > li + li:before {
   margin: auto;
 }
 /* ====================================================================== *
-      [4] FOOTER
+      [6] FOOTER
  * ====================================================================== */
 
 .footer .list-inline .footer-brand {
@@ -405,7 +406,7 @@ footer {
 
 
 /* ====================================================================== *
-      [10] MEDIA BOX 
+      [7] MEDIA BOX 
  * ====================================================================== */
 
       .media-box-content_item1 {
@@ -422,7 +423,7 @@ footer {
         font-variant: uppercase;
         padding: 10px 10px;
         width: 100%;
-        background: rgba(0, 143, 213, 0.5); 
+        background: rgba(0, 143, 213, 0.8); 
       }
 
       .media-box-caption {
@@ -441,7 +442,7 @@ footer {
 
 
 /* ====================================================================== *
-      [9] RESPONSIVE DESIGN
+      [8] RESPONSIVE DESIGN
  * ====================================================================== */
 
 @media only screen and (max-width: 1460px) {

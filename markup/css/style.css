@@ -426,6 +426,10 @@ footer {
         background: rgba(0, 143, 213, 0.8); 
       }
 
+      .media-box-title {
+        font-size: 15px;
+    }
+
       .media-box-caption {
         margin-top: -20px;
         margin-bottom: 13px;

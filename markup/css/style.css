@@ -304,10 +304,18 @@ li.en.active {
       [3] HEADER
  * ====================================================================== */
 
-.media-boxes-filter{
-  float: right;
+.content-header {
+    width: 1460px;
+    background: #fafafa;
 }
 
+.filters-container {
+    margin-bottom: 15px;
+}
+
+.media-boxes-filter {
+  float: right;
+}
 .title h1 {
   margin-top: 10px;
   margin-bottom: 0px;
@@ -316,7 +324,17 @@ li.en.active {
       margin-right: 18px;
       margin-top: 12px;
 }
-   
+
+.section {
+     text-align: left;
+}
+
+.sticky {
+    position: fixed;  
+    top: 0;
+    z-index: 100;
+}
+     
 /* ====================================================================== *
       [4] BREADCRUMB 
  * ====================================================================== */
@@ -349,9 +367,10 @@ ol.breadcrumb > li + li:before {
  * ====================================================================== */
 
 .content {
-  width: 1460px; /*1024px*/
+  width: 1460px; 
   margin: auto;
 }
+
 /* ====================================================================== *
       [6] FOOTER
  * ====================================================================== */
@@ -409,48 +428,135 @@ footer {
       [7] MEDIA BOX 
  * ====================================================================== */
 
-      .media-box-content_item1 {
-        position: absolute; 
-        top: 78%; 
-        left: 0; 
-        
-      }
+.media-box-content-item1 {
+  position: absolute; 
+  top: 78%; 
+  left: 0; 
+}        
 
-      .media-box-title_item1 {
-        color: white;
-        font-size: 20px;
-        font-family: "roboto";
-        font-variant: uppercase;
-        padding: 10px 10px;
-        width: 100%;
-        background: rgba(0, 143, 213, 0.8); 
-      }
+.media-box-title-item1 {
+  color: white;
+  font-size: 20px;
+  font-family: "roboto";
+  padding: 10px 10px;
+  width: 100%;
+  background: rgba(0, 143, 213, 0.8); 
+}
+      
+.media-box-title {
+  font-size: 15px;
+}
 
-      .media-box-title {
-        font-size: 15px;
-    }
+.media-box-caption {
+  margin-top: -20px;
+  margin-bottom: 13px;
+  margin-right: -10px;
+  font-size: 11px;
+  text-align: right;
+  color: #999;
+}
+.media-box-read-more-link {
+  background: #008fd5;
+}
+.media-boxes-filter {
+  padding-top: 30px;
+}
 
-      .media-box-caption {
-        margin-top: -20px;
-        margin-bottom: 13px;
-        margin-right: -10px;
-        font-size: 11px;
-        text-align: right;
-        color: #999;
-      }
+.media-box-bottom {
+  margin: 15px 0px 0px 0px;
+}
+.share-button {
+  display: inline;
+  padding: 0px 5px 0px 0px;
+  color: #666;
+  margin: 4px;
+}
 
-      .media-box-footer {
-        background: white;
-        padding: 10px;
-      }
+.share-button-content {
+  display: none;
+  position: relative;
+  padding: 0px 12px;
+}
 
+.share-button:hover .share-button-content {
+  display: inline;   
+}
+
+.share-button-content a{
+  padding: 0px 12px 0px 6px ;
+  color: #666;
+  background-color: white; 
+}
+
+.share-button-content a:hover{
+  color: #428bca;
+}
+
+.share {
+  background: white;
+  color: #428bca;
+  border: none;
+  padding: 8px;
+  font-weight: 700;
+  font-size: 16px;
+}
+    
+.radio-title {
+  position: absolute; 
+  top: 24%;
+  left: 47%;
+  color: #428bca;
+  font-size: 12px;
+  font-family: "roboto";
+  width: 59%;
+  background: white;
+  text-align: left;
+  padding-left: 10px;    
+}
+      
+.radio-subtitle {
+  position: absolute; 
+  top: 40%;
+  left: 47%;
+  color: white;
+  font-size: 12px;
+  font-family: "roboto";
+  width: 47%;
+  background: none;
+  text-align: left;       
+}
+
+.media-secretary-general{
+  position: absolute;
+  top: 29%;
+  left: -11%;
+  color: #428bca;
+  font-size: 12px;
+  font-family: "roboto";
+  width: 59%;
+  background: white;
+  text-align: right;
+  padding-right: 21px;  
+}
+
+.media-secretary-general-title {
+  position: absolute; 
+  top: 48%;
+  left: 4%;
+  color: white;
+  font-size: 12px;
+  font-family: "roboto";
+  width: 44%;
+  background: none;
+  text-align: left; 
+}
 
 /* ====================================================================== *
       [8] RESPONSIVE DESIGN
  * ====================================================================== */
 
 @media only screen and (max-width: 1460px) {
-.content {
+.content, .content-header {
   width: 100%;
   padding: 0px 10px !important;
 }
@@ -468,11 +574,14 @@ footer {
   margin-right: auto;
   margin-bottom: 10px;
 }
+.title .content > .pull-left {
+  float: none !important;
+}
 }
 
 @media only screen and (max-width: 760px) {
 
- .page-header {
+.page-header {
    font-weight: 800;
    font-size: 30px;
  } 
@@ -492,6 +601,9 @@ footer {
   font-size: 26px;
 }
 .title p {
+  text-align: center;
+}
+.title h3 {
   text-align: center;
 }
 

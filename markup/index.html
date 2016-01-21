@@ -33,6 +33,7 @@
 		/* Style the search text field and the sort */
 		#search, .media-boxes-drop-down{
   			float: right;
+  			margin-top: -33px;
   		}
   		.media-boxes-drop-down{
   			margin-right: 10px;
@@ -118,32 +119,40 @@
             </div> <!-- /.row -->
           </div><!-- /.container -->
         </div><!-- /UN global brand bar and language switcher -->
+
 <div class="content grid-container">
 
 	<div class="grid-section">
-	<div class="title section">
-		<div class="content-header">
-			<div class="pull-left">
-				<img src="http://www.un.org/sites/www.un.org/themes/bootstrap_un/logo.png">
-			</div>
-			<div class="pull-left">
-				<h1>News and Media Dashboard</h1>
-				<h3>the latest news from the United Nations</h3>	
-			</div>
-		<div class="filters-container">
+		<div class="title section">
+			<div class="content-header">
 
-			<ul class="media-boxes-filter" id="filter">
-			  <li><a class="selected" href="#" data-filter="*">All</a></li>
-			  <li><a href="#" data-filter=".Photography">Photos</a></li>
-			  <li><a href="#" data-filter=".Indoors">News</a></li>
-			  <li><a href="#" data-filter=".Nature, .Outside">Radio</a></li>
-			  <li><a href="#" data-filter=".Life">Videos</a></li>
-			  <li><a href="#" data-filter=".Life">Secretary-General</a></li>
-			</ul>
+				<div class="pull-left">
+					<img src="http://www.un.org/sites/www.un.org/themes/bootstrap_un/logo.png">
+				</div>
 
-		</div>	
+				<div class="pull-left">
+					<h1>News and Media Dashboard</h1>
+					<h3>the latest news from the United Nations</h3>	
+				</div>
+				
+			<div class="filters-container">
+				<ul class="media-boxes-filter" id="filter">
+				  <li><a class="selected" href="#" data-filter="*">All</a></li>
+				  <li><a href="#" data-filter=".Indoors">News</a></li>
+				  <li><a href="#" data-filter=".Life">Press</a></li>
+				  <li><a href="#" data-filter=".Photography">Photos</a></li>
+				  <li><a href="#" data-filter=".Life">Videos</a></li>
+				  <li><a href="#" data-filter=".Nature, .Outside">Radio</a></li>
+				  <li><a href="#" data-filter=".Life">Secretary-General</a></li>
+				</ul>
+			</div>	
+			<div class="search-box"> 
+				<input type="text" id="search" class="media-boxes-search" placeholder="Search">
+			</div>
+			
+			
+			</div>
 		</div>
-	</div>
 
 		
 
@@ -184,9 +193,9 @@
 		                <div class="media-box-title">Dolor sit amet</div> 
 		                <div class="media-box-date">December 10, 2013</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur...</div> 
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> </div> 
 			            <div class="media-box-bottom">
-			                <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+			                
 	      					<div class="share-button">
 								<i class="fa fa-share-alt fa-lg"></i>
 								<div class="share-button-content">
@@ -195,6 +204,8 @@
 						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
 						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
 								</div>
+								<div class="source-text"><b>Source</b>: Radio</div> 
+		                    
 			            	</div>	
 			            </div>
 		            	 
@@ -203,7 +214,7 @@
 		            
 		        </div>
 
-		        <!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <!-- -------------------------- PRESS RELEASES BOX MARKUP -------------------------- -->      
 		        <div class="media-box Outside Nature">
 		            <div class="media-box-image">
 		                <div data-width="677" data-height="900" data-thumbnail="gallery/thumbnails/thumb-45.jpg"></div>   
@@ -217,9 +228,9 @@
 		                <div class="media-box-title">Ullamco laboris</div>
 		                <div class="media-box-date">December 10, 2013</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequa turillo voluptatibus consequatur commodi perferendis.... </div>
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequa turillo voluptatibus consequatur commodi perferendis.... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+		                </div>
 		               	<div class="media-box-bottom">
-			                <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 	      					<div class="share-button">
 								<i class="fa fa-share-alt fa-lg"></i>
 								<div class="share-button-content">
@@ -228,6 +239,8 @@
 						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
 						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
 								</div>
+								<div class="source-text"><b>Source</b>: Press</div> 
+		                    
 			            	</div>	
 		            	</div>			
 				
@@ -239,7 +252,7 @@
 		            <div class="media-box-image">
 		                <div data-width="320" data-height="214" data-thumbnail="gallery/thumbnails/thumb-23.jpg"></div>
 						<div class="thumbnail-overlay">
-							<i class="fa fa-video-camera mb-open-popup"></i>
+							<i class="fa fa-twitter mb-open-popup"></i>
 						</div>
 		            </div>
 
@@ -248,9 +261,9 @@
 		                <div class="media-box-title">Psico dell consecteture</div>
 		                <div class="media-box-date">December 10, 2013</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus ...</div>
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+ 						</div>
 		                <div class="media-box-bottom">
-			                <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 	      					<div class="share-button">
 								<i class="fa fa-share-alt fa-lg"></i>
 								<div class="share-button-content">
@@ -259,6 +272,8 @@
 						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
 						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
 								</div>
+								<div class="source-text"><b>Source</b>: Twitter</div> 
+		                    
 			            	</div>	
 		            	</div>	
 		                
@@ -275,7 +290,7 @@
 		                <div data-width="240" data-height="161" data-thumbnail="gallery/thumbnails/thumb-15.jpg"></div>
 		               
 		                <div class="thumbnail-overlay">
-	                      	<i class="fa fa-headphones mb-open-popup"></i>
+	                      	<i class="fa fa-newspaper-o mb-open-popup"></i>
 		                </div>
 		            </div>
 
@@ -284,9 +299,9 @@
 		                <div class="media-box-title">Aed do eiusmod</div>
 		                <div class="media-box-date">December 10, 2013</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... </div>
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+						</div>
 		                <div class="media-box-bottom">
-			                <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 	      					<div class="share-button">
 								<i class="fa fa-share-alt fa-lg"></i>
 								<div class="share-button-content">
@@ -295,6 +310,7 @@
 						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
 						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
 								</div>
+								<div class="source-text"><b>Source</b>: News</div> 
 			            	</div>	
 		            	</div>	
 		            </div>
@@ -317,9 +333,9 @@
 		                <div class="media-box-title">Et dolore magna</div>
 		                <div class="media-box-date">December 10, 2013</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... </div>
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+						</div>
 		                <div class="media-box-bottom">
-			                <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 	      					<div class="share-button">
 								<i class="fa fa-share-alt fa-lg"></i>
 								<div class="share-button-content">
@@ -328,15 +344,15 @@
 						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
 						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
 								</div>
+								 <div class="source-text"><b>Source</b>: Photo</div> 
 			            	</div>	
 		            	</div>	
-		               
 		            </div>
 
 		         
 		        </div>
 
-		        <!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <!-- -------------------------- SG BOX MARKUP -------------------------- -->      
 		        <div class="media-box Outside Life">
 		            <div class="media-box-image">
 		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/bankimoon-01.jpg"></div>
@@ -344,8 +360,8 @@
 	                      	<i class="fa fa-comment mb-open-popup"></i>
 		                </div>
 		            <div class="media-box-secretary-general">
-		                <div class="media-secretary-general">Secretary-General</div>
-		               	<div class="media-secretary-general-title">Displaced by violence in The Republic of the Congo</div>		
+		                <div class="SG-title">Secretary-General</div>
+		               	<div class="SG-subtitle">Displaced by violence in The Republic of the Congo</div>		
 		            </div>
 		            </div>
     
@@ -357,21 +373,18 @@
 		            <div class="media-box-image">
 		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/radio-01.jpg"></div>
 		                <div class="thumbnail-overlay">
-		                	<i class="fa fa-headphones mb-open-popup"></i>
-		                </div>
-	                    
-		           
+	                    	<i class="fa fa-headphones mb-open-popup"></i>
+	                    </div>
 		                <div class="radio-title">United Nations Radio</div>
 		                <div class="radio-subtitle">Lake Chad displaced to receive life-saving assistance</div>
 		            </div>
 		            <div class="media-box-content">
 		                <div class="media-box-caption">UN Photo/Mark Garten</div>
-		                <div class="media-box-title">A ut labore</div>
+		                <div class="media-box-title">UN Daily News</div>
 		                <div class="media-box-date">December 10, 2013</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... </div>
+		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> </div>
 		                <div class="media-box-bottom">
-			                <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 	      					<div class="share-button">
 								<i class="fa fa-share-alt fa-lg"></i>
 								<div class="share-button-content">
@@ -380,6 +393,7 @@
 						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
 						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
 								</div>
+								 <div class="source-text"><b>Source</b>: Radio</div> 
 			            	</div>	
 		            	</div>	
 		                
@@ -403,73 +417,89 @@
 		                <div class="media-box-text">
 		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 		                </div>
-		                
+		                <div class="media-box-bottom">
+	      					<div class="share-button">
+								<i class="fa fa-share-alt fa-lg"></i>
+								<div class="share-button-content">
+									<a href=""><i class="fa fa-facebook fa-lg"></i></a>
+						            <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
+								</div>
+								 <div class="source-text"><b>Source</b>: Video</div> 
+			            	</div>	
+		            	</div>	
 		            </div>
 
 		        </div>
 
-		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		<!-- -------------------------- TWITTER BOX MARKUP -------------------------- -->      
 		        <div class="media-box Photography Outside">
 		            <div class="media-box-image">
 		                <div data-width="320" data-height="180" data-thumbnail="gallery/thumbnails/thumb-17.jpg"></div>
-		                 
-		                <div class="thumbnail-overlay">
-	                      	<i class="fa fa-video-camera mb-open-popup"></i>
-		                </div>
+			                <div class="thumbnail-overlay">
+		                      	<i class="fa fa-video-camera mb-open-popup"></i>
+			                </div>
+
 		            </div>
 
 		            <div class="media-box-content">
-		                <div class="media-box-caption">UN Photo/Mark Garten</div>
-		                <div class="media-box-title">Enim ad minim</div>
-		                <div class="media-box-date">December 10, 2013</div>
+		            	<div class="logo-image">
+		                	<img src="gallery/thumbnails/un_logo.png">
+		                </div> 
+		                <div class="twitter-date"><b>United Nations</b> @UN-10h</div>
 		                <div class="media-box-text">
-		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+		                	See how @UNDPNepal support to reconstruct damaged irrigation canal helped quake survivors. http://goo.gl/QxLPy1 <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 		                </div>
-		               
+		               <div class="media-box-bottom">
+	      					<div class="share-button">
+								<i class="fa fa-share-alt fa-lg"></i>
+								<div class="share-button-content">
+									<a href=""><i class="fa fa-facebook fa-lg"></i></a>
+						            <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
+								</div>
+								 <div class="source-text"><b>Source</b>: Twitter</div> 
+			            	</div>	
+		            	</div>	
 		            </div>
 
-		            <div class="media-box-footer">
-		            	 <div class="media-box-social-buttons">
-				            <a href=""><i class="fa fa-facebook"></i></a>
-				            <a href=""><i class="fa fa-twitter"></i></a>
-				            <a href=""><i class="fa fa-google-plus"></i></a>
-				            <a href=""><i class="fa fa-flickr"></i></a>
-				            <a href=""><i class="fa fa-rss"></i></a>
-			            </div>
-		            </div>
 		        </div>
 		 
-		<!-- -------------------------- BOX MARKUP -------------------------- -->            
-		        <div class="media-box Photography Life">
+		<!-- -------------------------- TWITTER BOX MARKUP -------------------------- -->      
+		        <div class="media-box Photography Outside">
 		            <div class="media-box-image">
-		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/thumb-18.jpg"></div>
-		                 
-		                <div class="thumbnail-overlay">
-	                      	<i class="fa fa-video-camera mb-open-popup"></i>
-		                </div>
+		                <div data-width="320" data-height="180" data-thumbnail="gallery/thumbnails/twitter-01.jpg"></div>
+			                <div class="thumbnail-overlay">
+		                      	<i class="fa fa-video-camera mb-open-popup"></i>
+			                </div>
+
 		            </div>
 
 		            <div class="media-box-content">
-		                <div class="media-box-caption">UN Photo/Mark Garten</div>
-		                <div class="media-box-title">Nostrud exercitation</div>
-		                <div class="media-box-date">December 10, 2013</div>
+		            	<div class="logo-image">
+		                	<img src="gallery/thumbnails/un_logo.png">
+		                </div> 
+		                <div class="twitter-date"><b>United Nations</b> @UN-10h</div>
 		                <div class="media-box-text">
-		                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ea commodi perferendis voluptates amet inventore minus quis, illo voluptatibus consequatur... <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+		                	See how @UNDPNepal support to reconstruct damaged irrigation canal helped quake survivors. http://goo.gl/QxLPy1 <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
 		                </div>
-		               
+		               <div class="media-box-bottom">
+	      					<div class="share-button">
+								<i class="fa fa-share-alt fa-lg"></i>
+								<div class="share-button-content">
+									<a href=""><i class="fa fa-facebook fa-lg"></i></a>
+						            <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
+								</div>
+								 <div class="source-text"><b>Source</b>: Twitter</div> 
+			            	</div>	
+		            	</div>	
 		            </div>
 
-		            <div class="media-box-footer">
-		            	 <div class="media-box-social-buttons">
-				            <a href=""><i class="fa fa-facebook"></i></a>
-				            <a href=""><i class="fa fa-twitter"></i></a>
-				            <a href=""><i class="fa fa-google-plus"></i></a>
-				            <a href=""><i class="fa fa-flickr"></i></a>
-				            <a href=""><i class="fa fa-rss"></i></a>
-			            </div>
-		            </div>
 		        </div>
-
 		      
 		<!-- -------------------------- BOX MARKUP -------------------------- -->      
 		        <div class="media-box Outside Nature">
@@ -713,6 +743,9 @@
             },
             ], 
 	    }); 
+
+/* Sticky Header Top */
+
 $(document).ready(function() {
 var stickyNavTop = $('.content-header').offset().top;
  

@@ -14,11 +14,11 @@
  *      [5] CONTENT
  *      [6] FOOTER 
  *      [7] MEDIA BOXES
- *      [7.2] ITEM1 BOX
- *      [7.3] RADIO BOX
- *      [7.4] SG BOX
- *      [7.5] TWITTER BOX
- *      [8] RESPONSIVE DESIGN
+ *      [7.2] RADIO BOX
+ *      [7.3] SG BOX
+ *      [7.4] TWITTER BOX
+ *      [8] NAVBAR-TOGGLE
+ *      [9] RESPONSIVE DESIGN
  * ======================================================= */
 
 
@@ -30,6 +30,7 @@ html {
   overflow: visible !important;
 }
 body {
+  background-color: #e9eaed; 
   font-family: 'Roboto';
   -webkit-transition: margin 0.4s ease;
   -moz-transition: margin 0.4s ease;
@@ -78,7 +79,7 @@ a.language-link.active {
 }
 
 #brand-bar {
-  background: #f2f2f2;
+  background: #e9eaed;
   margin: 0;
   padding: 0;
   border: none !important;
@@ -268,10 +269,6 @@ header {
     display: block;
 }
 
-.navbar-collapse.in {
-    overflow-y: auto;
-}
-
   #brand-bar .brandbar-header .language-switcher button.navbar-toggle {
     margin-top: 0;
     border: none;
@@ -310,7 +307,7 @@ li.en.active {
 
 .content-header {
   width: 1460px;
-  background: #fafafa;
+  background: #e9eaed;
 }
 
 .media-boxes-filter {
@@ -331,11 +328,13 @@ li.en.active {
 }
 .title img {
   margin-right: 14px;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .section {
   text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .sticky {
@@ -345,7 +344,7 @@ li.en.active {
 }
 
 .search-box {
-  margin: 10px 0px 40px 0px;
+  margin: 10px 0px 50px 0px;
 }
      
 /* ====================================================================== *
@@ -509,25 +508,7 @@ footer {
 
 }
 
-/* [7.2] ITEM 1 */
-
-.media-box-content-item1 {
-  position: absolute; 
-  top: 78%; 
-  left: 0; 
-  
-}
-
-.media-box-title-item1 {
-  color: white;
-  font-size: 20px;
-  font-family: "roboto";
-  padding: 10px 10px;
-  width: 100%;
-  background: rgba(0, 143, 213, 0.8); 
-}
-
-/* [7.3] RADIO BOX */
+/* [7.2] RADIO BOX */
 
 .radio-title {
   position: absolute; 
@@ -554,7 +535,7 @@ footer {
   text-align: left;       
 }
 
-/* [7.4] SECRETARY-GENERAL BOX */
+/* [7.3] SECRETARY-GENERAL BOX */
 
  
 .SG-title {
@@ -581,12 +562,18 @@ footer {
   background: none;
   text-align: left; 
 }
-/* [7.5] TWITTER BOX */
+/* [7.4] TWITTER BOX */
 
 .logo-image {
   position: absolute;
   top: -13%;
-  left: 8%;
+  left: 6%;
+}
+
+.logo-image-lg {
+  position: absolute;
+  top: -19%;
+  left: 4%;
 }
 
 .twitter-date {
@@ -595,105 +582,204 @@ footer {
   margin: -16px 0 0 57px;
   line-height: 15px;
 }
+/* ====================================================================== *
+      [8] NAVBAR-TOGGLE
+ * ====================================================================== */
+.navbar-toggle {
+  background: white;
+  border: 2px solid #4d4d4d;
+  margin top: 10px;
+  padding: 6px 4px;
+  margin-right: -10px;
+}
+
+.navbar-toggle:hover {
+  background: #e9eaed;
+} 
+
+.navbar-toggle .icon-bar {
+  background-color: #4d4d4d;  
+}
+
+.navbar-collapse {
+  padding-right: 0px;
+}
+
+.navbar-collapse.in {
+  overflow-y: visible !important;
+}
 
 
 
 /* ====================================================================== *
-      [8] RESPONSIVE DESIGN
+      [9] RESPONSIVE DESIGN
  * ====================================================================== */
 
 @media only screen and (max-width: 1460px) {
-.content, .content-header {
-  width: 100%;
-  padding: 0px 10px !important;
-}
+  
 
-@media only screen and (max-width: 990px) {
-.content {
-  width: 100%;
-  padding: 0px 10px !important;
-}
-.media-boxes-filter{
-  float: left;
-}
-.title img {
-  float: left;
-}
-.title .content > .pull-left {
-  float: none !important;
-}
-.search-box {
-  margin-top: -30px;
-}
+  .content, .content-header {
+    width: 100%;
+    padding: 0px 10px !important;
+  }
+  .sticky >.navbar-collapse {
+    padding-right: 10px;
+  }
 
-}
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1200px) {
+  .content {
+    width: 100%;
+  }
 
-.title {
-  margin-top: 30px;
+  .navbar-collapse {
+    padding-left: 0px;
+  }
+  .media-boxes-filter{
+    float: left;
+    margin: 0px -19px;
+  }
+  .title img {
+    float: left;
+  }
 
-}
-.title img {
-  margin-bottom: 10px;
-}
+  .title .content > .pull-left {
+    float: none !important;
+  }
+  .search-box {
+    margin-top: -30px;
+    margin-right: 10px;
+  }
+  }
 
-.media-boxes-filter {
-  margin: -17px;
-}
-.media-boxes-filter>li a {
-  display: block;
-}
+@media only screen and (max-width: 900px) {
 
-.search-box {
-  float: left;
-  margin-top: 15px;
-  margin-left: -10px;
-}
+  .content .navbar-nav>li>a{
+    padding: 15px 15px !important;
+  }
+  .pull-left {
+      float: none !important;
+  }
+
+  .title img {
+    margin-top: 5px;
+  }
+  .media-boxes-filter>li a {
+    display: block;
+  }
+
+  .search-box {
+    float: right;
+    margin: -130px -10px 0px 0px;
+  }
+
+  .sticky h3 {
+    margin-left: 70px;
+  }
+  .sticky img {
+    margin: 14px 15px -10px 0px;
+  }
+
+  .sticky .search-box {
+    margin-right: 0px;
+  }
+
+@media only screen and (max-width: 770px) {
+
+  .title h1 {
+    font-size: 30px;
+  }
+
+  .title h3 {
+    text-align: left;
+    font-size: 16px;
+    margin-left: 70px;
+  }
+  .search-box {
+    float: left;
+    margin: 10px -9px 5px 0px;
+  }
+
+  .sticky > .navbar-toggle {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+
+  .sticky > .media-boxes-filter {
+    margin-top: 0px !important;
+  }
+
+  .media-boxes-search {
+    margin-left: -10px;
+
+  }
 
 @media only screen and (max-width: 480px) {
-.page-header {
- font-weight: 800;
- font-size: 30px;
- } 
 
-.title img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
+  .title img {
+    display: block;
+    margin: 3px 15px 10px 0px;
+    float: left;
+  }
+
+  .title h1 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-size: 26px;
+  }
+
+  .title h3 {
+    opacity: 0;
+    overflow: hidden;
+
+  }
+
+  .section {
+    padding-bottom: 0px;
+  }
+
+  .media-boxes-filter {
+    padding-top: 0px;
+  }
+
+  .sticky h1 {
+    margin-bottom: -19px;
+  }
+  
+  .media-boxes-filter>li a {
+    display: block;
+    padding: 8px 11px;
+  }
+  .sticky img {
+    margin: 20px 10px -10px 0px;
+  }
+
+@media only screen and (max-width: 330px) {
+
+.section {
+  padding-top: 0px;
+}
+
+.title h3 {
+  font-size: smaller;
 }
 
 .title h1 {
-  text-align: center;
-  font-size: 26px;
-}
-.title p {
-  text-align: center;
-}
-.title h3 {
-  text-align: center;
+  font-size: 20px;
 }
 
-.media-boxes-filter>li a {
-  display: block;
+.navbar-toggle {
+    margin-top: 0px;
+    margin-right: -8px;
 }
 
+.sticky img {
+    margin: 20px 10px 0px 0px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.media-boxes-filter > li a {
+  font-size: 10px;
+}
 
 
 

@@ -39,8 +39,7 @@
 	
 	body{
 		font-family: 'Open Sans';
-		background: #FAFAFA;
-		
+		background: #e9eaed;
 		margin-top: 0px;
 		-webkit-transition: margin 0.4s ease;
 	       -moz-transition: margin 0.4s ease;
@@ -412,7 +411,7 @@
 	}
 
 	.section{
-		background: #FAFAFA;
+		background: #e9eaed;
 		width: 100%;
 		padding: 30px 0px;
 		text-align: center;
@@ -491,7 +490,7 @@
 		padding-bottom: 40px !important;
 		border: none !important;
 		color: #777777;
-		background: #fafafa;
+		background: #e9eaed;
 	}
 
 /* ====================================================================== *

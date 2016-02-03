@@ -21,9 +21,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	<!-- Custom style for the demo-->
-  	
-  	<link rel="stylesheet" href="css/demo.css">
-  	<link rel="stylesheet" href="css/style.css">
+
+  	<link rel="stylesheet" href="css/style.css">  	
   	<link rel="stylesheet" href="css/animate.css">
 
 	<style>
@@ -107,7 +106,7 @@
 	
 	<!--LANGUAGE BAR-->
 
-<div id="brand-bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div id="brand-bar" class="navbar navbar-default" role="navigation">
         <!-- UN global brand bar -->
           <div class="container brandbar-header">
             <div class="row">
@@ -125,31 +124,37 @@
 	<div class="grid-section">
 		<div class="title section">
 			<div class="content-header">
-
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				      <span class="sr-only">Toggle navigation</span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+			    </button>
 				<div class="pull-left">
-					<img src="http://www.un.org/sites/www.un.org/themes/bootstrap_un/logo.png">
+					<img src="img/logo.png">
 				</div>
 
 				<div class="pull-left">
 					<h1>News and Media Dashboard</h1>
 					<h3>the latest news from the United Nations</h3>	
 				</div>
-				
-			<div class="filters-container">
-				<ul class="media-boxes-filter" id="filter">
-				  <li><a class="selected" href="#" data-filter="*">All</a></li>
-				  <li><a href="#" data-filter=".Indoors">News</a></li>
-				  <li><a href="#" data-filter=".Life">Press</a></li>
-				  <li><a href="#" data-filter=".Photography">Photos</a></li>
-				  <li><a href="#" data-filter=".Life">Videos</a></li>
-				  <li><a href="#" data-filter=".Nature, .Outside">Radio</a></li>
-				  <li><a href="#" data-filter=".Life">Secretary-General</a></li>
-				</ul>
-			</div>	
-			<div class="search-box"> 
-				<input type="text" id="search" class="media-boxes-search" placeholder="Search">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
+				<div class="filters-container">
+					<ul class="media-boxes-filter" id="filter">
+					  <li><a class="selected" href="#" data-filter="*">All</a></li>
+					  <li><a href="#" data-filter=".Indoors">News</a></li>
+					  <li><a href="#" data-filter=".Life">Twitter</a></li>
+					  <li><a href="#" data-filter=".Photography">Photos</a></li>
+					  <li><a href="#" data-filter=".Life">Videos</a></li>
+					  <li><a href="#" data-filter=".Nature, .Outside">Radio</a></li>
+					  <li><a href="#" data-filter=".Life">Secretary-General</a></li>
+					</ul>
+				</div>	
+
+				<div class="search-box"> 
+					<input type="text" id="search" class="media-boxes-search" placeholder="Search">
+				</div>
 			</div>
-			
 			
 			</div>
 		</div>
@@ -162,18 +167,36 @@
 
 		<div id="grid">
 
-		<!-- -------------------------- BOX MARKUP 1 -------------------------- -->      
-		        <div class="media-box Photography Indoors" data-columns="2">
+		<!-- -------------------------- BOX MARKUP -------------------------- -->      
+		        <div class="media-box Outside Life" data-columns="2">
 		            <div class="media-box-image">
-		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/boscontaganda.jpg"></div>
-		               
+		                <div data-width="320" data-height="213" data-thumbnail="gallery/thumbnails/thumb-16.jpg"></div>
+		                
 		                <div class="thumbnail-overlay">
-	                      	<i class="fa fa-newspaper-o mb-open-popup"></i>
+	                      	<i class="fa fa-video-camera mb-open-popup"></i>
 		                </div>
 		            </div>
-		            <div class="media-box-content-item1">
-		                <div class="media-box-title-item1">Displaced by violence in The Republic of the Congo</div>
-		               
+
+		            <div class="media-box-content">
+		                <div class="logo-image-lg">
+		                	<img src="gallery/thumbnails/un_logo.png">
+		                </div> 
+		                <div class="twitter-date"><b>United Nations</b> @UN-10h</div>
+		                <div class="media-box-text">
+		                	See how @UNDPNepal support to reconstruct damaged irrigation canal helped quake survivors. http://goo.gl/QxLPy1 <a class="media-box-read-more-link" href="#"><i class="fa fa-arrow-right"></i></a> 
+		                </div>
+		               <div class="media-box-bottom">
+	      					<div class="share-button">
+								<i class="fa fa-share-alt fa-lg"></i>
+								<div class="share-button-content">
+									<a href=""><i class="fa fa-facebook fa-lg"></i></a>
+						            <a href=""><i class="fa fa-twitter fa-lg"></i></a>
+						            <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+						            <a href=""><i class="fa fa-flickr fa-lg"></i></a>
+								</div>
+								 <div class="source-text"><b>Source</b>: Twitter</div> 
+			            	</div>	
+		            	</div>	
 		            </div>
 
 		        </div>
@@ -732,7 +755,7 @@
             },
 
             {
-                maxWidth: 760,
+                maxWidth: 770,
                 columnWidth: 'auto',
                 columns: 2,
             },

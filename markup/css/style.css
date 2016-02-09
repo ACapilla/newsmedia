@@ -513,8 +513,8 @@ footer {
 .radio-title {
   position: absolute; 
   top: 24%;
-  left: 47%;
-  color: #428bca;
+  left: 52%;
+  color: #676767;
   font-size: 12px;
   font-family: "roboto";
   width: 59%;
@@ -526,7 +526,7 @@ footer {
 .radio-subtitle {
   position: absolute; 
   top: 40%;
-  left: 51%;
+  left: 56%;
   color: white;
   font-size: 12px;
   font-family: "roboto";
